@@ -3,17 +3,40 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      color: {
-        orange: {
-          100: '#FFEDD5',
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        purple: {
+          500: '#FF66F0',
+          800: '#5200FF',
         },
+        gray: {
+          800: '#282727',
+        },
+        orange: {
+          500: '#F84E29',
+        },
+        blue: {
+          500: '#4B4AEF',
+        },
+      },
+      width: {
+        50: '50px',
+        61: '60px',
+        65: '64px',
+        376: '376px',
+      },
+      height: {
+        30: '30px',
+        50: '50px',
+        65: '64px',
+        140: '140px',
       },
     },
   },
   variants: {
     extend: {
-      backgroundColor: ['active'],
-      boxShadow: ['active'],
+      scale: ['active'],
     },
   },
   plugins: [],

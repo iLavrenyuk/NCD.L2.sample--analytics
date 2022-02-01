@@ -11,6 +11,7 @@
 # production
 /build
 /NCD.L1.sample--near-analytics
+/near-analytics-new
 
 # misc
 .DS_Store
