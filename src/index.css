@@ -46,12 +46,12 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
   .wave {
-    background: url('../img/abs.png') no-repeat;
+    background: url('./assets/img/abs.png') no-repeat;
     background-size: contain;
     background-position: 50% 50%;
   }
   .wave-purple {
-    background: url('../img/purple.png') no-repeat;
+    background: url('./assets/img/purple.png') no-repeat;
     background-size: contain;
     background-position: 50% 50%;
   }

@@ -35,13 +35,19 @@ export const Header = () => {
           <div className="hidden lg:block">
             <ul className="flex space-x-6 text-gray-900 font-semibold xl:text-lg">
               <li>
-                <HashLink to={hashRoutes.About}>About contract</HashLink>
+                <HashLink smooth to={hashRoutes.About}>
+                  About contract
+                </HashLink>
               </li>
               <li>
-                <HashLink to={hashRoutes.HowItWorks}>How it works</HashLink>
+                <HashLink smooth to={hashRoutes.HowItWorks}>
+                  How it works
+                </HashLink>
               </li>
               <li>
-                <HashLink to={hashRoutes.Opportunities}>Contract opportunities</HashLink>
+                <HashLink smooth to={hashRoutes.Opportunities}>
+                  Contract opportunities
+                </HashLink>
               </li>
             </ul>
           </div>

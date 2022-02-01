@@ -21,6 +21,7 @@ export const BlockTitle = () => {
             Go to dashboard
           </Link>
           <HashLink
+            smooth
             to={hashRoutes.About}
             className="inline-block w-64 border-2 text-center font-semibold py-3 rounded-full border-gray-900 hover:bg-black hover:text-white"
           >
