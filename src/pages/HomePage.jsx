@@ -6,10 +6,12 @@ import { BlockUrge } from '../components/BlockUrge';
 import { BlockTitle } from '../components/BlockTitle';
 import { HowItWorks } from '../components/HowItWorks';
 import { Opportunities } from '../components/Opportunities';
+import { ChangeContract } from '../components/ChangeContract';
 
 export const HomePage = () => {
   return (
     <>
+      <ChangeContract />
       <Header />
       <BlockTitle />
       <About />
