@@ -1,7 +1,7 @@
 import React from 'react';
-import { Dataset } from '../Dataset';
 import { Link } from 'react-router-dom';
 import { routes } from '../../router/routes';
+import { DatasetItem } from '../DatasetItem';
 import { ProfileBlock } from '../ProfileBlock';
 
 export const DashboardBody = () => {
@@ -20,7 +20,14 @@ export const DashboardBody = () => {
             </Link>
           </div>
           <div className="grid grid-cols-1 xl:grid-cols-2 mt-11 lg:gap-x-4 xl:gap-x-11 gap-y-10 xl:gap-y-8">
-            <Dataset />
+            {[...Array(8)].map((e, index) => (
+              <DatasetItem
+                key={index}
+                id={index}
+                name={'Name of dataset ' + (index + 1)}
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum ante"
+              />
+            ))}
           </div>
         </div>
       </div>
