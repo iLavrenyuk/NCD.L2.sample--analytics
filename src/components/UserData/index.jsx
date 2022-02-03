@@ -10,7 +10,7 @@ export const UserData = ({ accountId, isHeader, handleSignOut }) => {
         } bg-gray-200 rounded-full`}
       >
         <img
-          className="w-2/3"
+          className="w-1/2"
           src={require('../../assets/img/photo-camera-interface-symbol-for-button 1.png')}
           alt=""
         />

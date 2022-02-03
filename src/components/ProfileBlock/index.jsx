@@ -3,7 +3,7 @@ import { UserData } from '../UserData';
 import { useStore } from '../../store';
 import { signOut } from '../../services/near';
 
-export const ManageProfile = ({ className }) => {
+export const ProfileBlock = ({ className }) => {
   const { accountId, setAccountId } = useStore();
 
   const handleSignOut = () => {
@@ -13,7 +13,7 @@ export const ManageProfile = ({ className }) => {
 
   return (
     <>
-      <div className={`mt-8 flex ${className}`}>
+      <div className={`flex ${className ?? ''}`}>
         <UserData accountId={accountId} />
       </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { LogoBig } from '../LogoBig';
 import { SearchInput } from '../SearchInput';
-import { ManageProfile } from '../ManageProfile';
+import { ProfileBlock } from '../ProfileBlock';
 
 export const MobileMenu = ({ handleClose }) => {
   return (
@@ -27,7 +27,7 @@ export const MobileMenu = ({ handleClose }) => {
         <div className="mt-8 flex justify-center">
           <SearchInput />
         </div>
-        <ManageProfile className="justify-center" />
+        <ProfileBlock className="mt-8 justify-center" />
       </div>
     </div>
   );
