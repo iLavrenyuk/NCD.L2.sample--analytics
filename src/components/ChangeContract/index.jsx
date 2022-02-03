@@ -164,7 +164,7 @@ export const ChangeContract = () => {
               type="text"
               placeholder="dev-[contract ID]"
               className={`mt-2 pl-6 h-11 w-full rounded-full border ${
-                !apiError ? 'border-orange-500' : 'border-gray-400 focus:border-purple-800'
+                apiError ? 'border-orange-500' : 'border-gray-400 focus:border-purple-800'
               }  bg-white input-shadow outline-none text-sm font-semibold placeholder-gray-400`}
             />
           </div>

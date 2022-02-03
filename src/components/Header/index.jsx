@@ -1,6 +1,7 @@
 import React from 'react';
+import { LogoBig } from '../LogoBig';
 import { useStore } from '../../store';
-import { Link } from 'react-router-dom';
+import { UserData } from '../UserData';
 import { HashLink } from 'react-router-hash-link';
 import { signIn, signOut } from '../../services/near';
 import { hashRoutes, routes } from '../../router/routes';
@@ -9,7 +10,7 @@ export const Header = () => {
   const { accountId, setAccountId } = useStore();
 
   const handleSignIn = () => {
-    signIn(window.location.origin + routes.Home);
+    signIn(window.location.origin + routes.Dashboard);
   };
 
   const handleSignOut = () => {
@@ -21,16 +22,7 @@ export const Header = () => {
     <header className="border-b border-gray-300">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center">
-          <div>
-            <Link to={routes.Home} className="flex items-center text-2xl xl:text-4xl font-semibold">
-              <img
-                src={require('../../assets/img/near-logo-black.png')}
-                alt=""
-                className="border-r-2 border-gray-500 mr-4 my-4 pr-3 w-16"
-              />
-              Analytics
-            </Link>
-          </div>
+          <LogoBig />
 
           <div className="hidden lg:block">
             <ul className="flex space-x-6 text-gray-900 font-semibold xl:text-lg">
@@ -54,7 +46,7 @@ export const Header = () => {
 
           <div className="flex items-center justify-between">
             {accountId ? (
-              <button onClick={handleSignOut}>handleSignOut</button>
+              <UserData accountId={accountId} handleSignOut={handleSignOut} isHeader />
             ) : (
               <button
                 onClick={handleSignIn}
