@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { routes } from '../../router/routes';
 
 const backgroundColors = [
   'bg-red-500',
@@ -16,14 +18,18 @@ export const DatasetItem = ({ name, text, image, id }) => {
 
   return (
     <div className="flex w-full h-32 md:h-32 lg:h-40 bg-white sh-card rounded-md">
-      <a href="#" className={`block h-full min-w-24 w-24 rounded-l-md ${image ? '' : backgroundColors[bgCounter]}`}>
+      <Link
+        to={routes.Dataset}
+        href="#"
+        className={`block h-full min-w-24 w-24 rounded-l-md ${image ? '' : backgroundColors[bgCounter]}`}
+      >
         {image}
-      </a>
-      <div className="py-5 px-6 box-content">
-        <a href="#" className="text-base md:text-xl lg:text-2xl font-semibold">
+      </Link>
+      <div className="py-5 px-6 box-content truncate">
+        <Link to={routes.Dataset} href="#" className="text-base md:text-xl lg:text-2xl font-semibold truncate">
           {name}
-        </a>
-        <p className="mt-2 text-gray-300 font-semibold text-ellipsis overflow-hidden max-h-22">{text}</p>
+        </Link>
+        <p className="mt-2 text-gray-300 font-semibold whitespace-normal max-h-22">{text}</p>
       </div>
     </div>
   );

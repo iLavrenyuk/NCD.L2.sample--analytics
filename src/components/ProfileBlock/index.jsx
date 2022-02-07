@@ -2,6 +2,7 @@ import React from 'react';
 import { UserData } from '../UserData';
 import { useStore } from '../../store';
 import { signOut } from '../../services/near';
+import { ManageButtons } from '../ManageButtons';
 
 export const ProfileBlock = ({ className }) => {
   const { accountId, setAccountId } = useStore();
@@ -17,18 +18,12 @@ export const ProfileBlock = ({ className }) => {
         <UserData accountId={accountId} />
       </div>
 
-      <div className="mt-8 space-y-6">
-        <a href="#" className="inline-block w-full btn border">
-          Edit profile
-        </a>
-        <button
-          onClick={handleSignOut}
-          className="flex items-center justify-center w-full py-3 border border-red-600 text-red-600 rounded-full hover:bg-red-600 hover:text-white"
-        >
-          Logout
-          <img src={require('../../assets/img/login-box-line.png')} alt="" className="ml-2" />
-        </button>
-      </div>
+      <ManageButtons
+        submitText="Edit profile"
+        onReset={handleSignOut}
+        resetText="Logout"
+        resetIcon={<img src={require('../../assets/img/login-box-line.png')} alt="" className="ml-2" />}
+      />
 
       <p className="text-sm mt-9">
         Lorem ipsum dolor sit amen, consenter advising elite. Intercut ante sed aeneas dolor pellentesque congue ipsum.

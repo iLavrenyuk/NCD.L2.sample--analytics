@@ -1,6 +1,7 @@
 export const routes = {
   Home: '/',
   Dashboard: '/dashboard',
+  Dataset: '/dataset',
   AddChart: '/add-chart',
 };
 
